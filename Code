@@ -1,0 +1,44 @@
+def FindEquation():
+    print ("Follow the following steps to find the equation of your line.\n")
+    print("First, find a point on the graph and fill in the x and y values.")
+    Point1X = int(input("X = "))
+    Point1Y = int(input("Y = "))
+    print("\nFind another point on a graph and fill in the x and y values.")
+    Point2X = int(input("X = "))
+    Point2Y = int(input("Y = "))
+    slope_of_line = ( Point2Y - Point1Y ) / ( Point2X - Point1X )
+    y_int = Point1Y - Point1X * slope_of_line
+    print("\n\nThe equation of your line is")
+    print("y =", slope_of_line, "x +", y_int)
+
+def Logo():
+    print("  ___                _   _          ")
+    print(" | __|__ _ _  _ __ _| |_(_)___ _ _  ")
+    print(" | _|/ _` | || / _` |  _| / _ \ ' \ ")
+    print(" |___\__, |\_,_\__,_|\__|_\___/_||_|")
+    print("        |_|  ___   __               ")  
+    print("            / _ \ / _|              ")
+    print("           | (_) |  _|              ")         
+    print("            \___/|_|                ")
+    print("               /_\                  ")
+    print("              / _ \                 ")
+    print("             /_/ \_\                ")
+    print("         _    _                     ")
+    print("        | |  (_)_ _  ___            ")           
+    print("        | |__| | ' \/ -_)           ")
+    print("        |____|_|_||_\___|           ")
+    print("         by Daniel Arruda ")
+    
+def Homepage():
+    print("\nIn this program, you will be able to find the equation of a straight line. Before you start filling the information in, please read the following.\n1. The equation will have random quotation marks and paranthesis. Please ignore them. \n2. The equation will be written in y = mx + b form.\n3. This program can only find the equation of a straight line.\n4. The equation is not simplified. If there is no slope, 0x will be included in the equation insead of just the y-intercept. If the slope is 1, the 1 will be in front of the x. If the y-intercept is negative, there will be a plus sign before the negative number.\n5. There will be an error when solving if both of your X points are the same value. If that is the case, the slope is unidentified and the equation should be x = the value of your X points.\n")
+    
+def Type_One():
+    Type_1 = int(input("Type 1 to continue and find the equation: "))
+    if Type_1 == 1:
+        FindEquation()
+    else:
+        print("Invalid number.")
+        Type_One()
+Logo()
+Homepage()
+Type_One()
